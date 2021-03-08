@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Projects: Dylan Cain-Pruis</h1>
+			<h2>University Projects</h2>
+				<p class="endSection">
+					The projects displayed here are ones that I particularly enjoyed doing and found interesting. I
+					have completed many other projects at university in different areas such as cybersecurity, algorithms
+					and data structures, artificial intelligence, machine learning, and web applications. A lot of these
+					are either web APIs, console, or command line applications so aren't very interesting to show. 
+				</p>
+				<h3>Asteroids</h3>
+					<p>
+						A simple game of asteroids was created in typescript using functional programming 
+						practices. The following are some features of the game: 
+					</p>
+					<ul>
+						<li>Observables control the main game loop and manage the user input</li>
+						<li>Asteroids destroyed add to the user score, which increase the level. A higher level increases asteroid density.</li>
+						<li>The user has 3 lives only before game over. Colliding with an asteroid causes the asteroid to explode and a life to be lost.</li>
+						<li>Collisions were implemented by using linear algebra and checking for intersection points 
+							between the ship and the asteroids. This provides precise collision checking between rotating objects.
+						</li>
+					</ul>
+					<p> Note that I'm not very good at the game as seen in the video below! </p>
+						
+					<video src="asteroids.mp4" class="fit endSection"  alt="Gameplay of the asteroids application" controls>Demo gameplay of asteroids</video>
+				
+						
+				<h3>Patient Monitor</h3>
+					<p>
+						A JavaFX desktop application was developed over the course of an entire unit that allowed a 
+						health practitioner to sign in with an id and view a list of their patients that can be monitored. 
+						The following are a list of features that were implemented:
+					</p>
+					<ul>
+						<li>Patients and information regarding their blood pressure and cholesterol are retrieved from a FHIR server.</li>
+						<li>Data from the FHIR is updated on a frequency that is inputted by the user</li>
+						<li>Patients from a list can be selected to monitor their blood pressure, cholesterol, or both in detail.</li>
+						<li>Any patients that have a diastolic blood pressure, systolic blood pressure, or cholesterol above a certain user set threshold are highlighted.</li>
+						<li>Line charts can be displayed to show change in readings over time for multiple patients.</li>
+					</ul>
+	
+					<p>
+						A large part of the software and assignments was to create software using design principles and patterns
+						such that we could later extend the software. The software made use of observers, abstract
+						factories, iterators, and more. In the later assignment when extending the initial software was easy
+						and required only a few refactors due to how it was innitially designed.
+						<br>
+						Below is an image of the patient monitor with a few patients displayed. Note all the data shown
+						is fake data that was given to us by the university for completing the assignments.
+					</p>
+					<img src="patient_monitor.jpg" class="fit endSection" alt="Patient monitor displaying cholesterol and blood pressure information">
+
+			<h2>Other Projects</h2>
+				<h3>Goodreads advanced search</h3>
+					<p> 
+						Goodreads provides a platform for reviewing, rating, and searching for books. When
+						working on this project there was no feature to filter/sort a shelf for a specific
+						genre. This project aims to create a solution to this, which consists of two 
+						components:
+					</p>	
+				
+					<ol>
+						<li>A web scraper written in python</li>
+						<li>A web application using django to display the scraped data and sort/filter it	</li>
+					</ol>
+
+					<h4>Web Scraper</h4>
+						<p> 
+							Currently, only books from the fantasy shelf, 
+							https://www.goodreads.com/shelf/show/fantasy, are being scraped as that's the
+							main genre of books that I read. Before book information can be retrieved, a 
+							request must be made to login to gain access to more than the first page of
+							the shelf. By analysing the HTML form the required key-value pairs required
+							in the payload can be found and used for logging in. 
+							<br><br>
+							After logging in, the scraper retrieves the name of each book, the author, the average rating, 
+							the number of ratings, the year published, and a thumbnail of the book cover.
+							This information is saved for the application to use and does require updating
+							occasionally as the values do change. Updating the information is as simple as
+							starting the web application and going to the /scraper/ endpoint.
+						</p>
+					<h4>Web application</h4>
+						<p> 
+							A simple web application is used to display the data retrieved from the scraper.
+							The web application makes use of Django's templates to generate the HTML page
+							dynamically using the data in the SQLite database. Javascript functionality
+							implemented allows:
+						</p>
+						<ul>
+							<li>Exclusion of certain book names/series (i.e. can remove book series I've read)</li>
+							<li>Selection within a range for rating, number of ratings, and year.</li>
+						</ul>
+						<p>
+							 
+							 The result is as seen in the image below. The UI is simplistic, but it provides
+							 the functionality to help me search for books easier and it's found me multiple new
+							 books to read.
+							 <br><br>
+							 Future work on the project includes creating a profile remember books that I've
+							 read before so they are removed from the list and to also expanding the number of books in the database (currently 
+							 1250).
+						</p>
+						<img src="goodreads_scraper.jpg" class="fit" alt="Goodreads search application main page">
+		
+						
+		</div>
+		
+
+	</body>
+</html>
