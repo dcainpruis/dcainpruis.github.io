@@ -2,38 +2,128 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
+		<title>Dylan Cain-Pruis - Documentation</title>
 	</head>
 	<body>
-		<div class="content">
-			<h1>Projects: Dylan Cain-Pruis</h1>
-			<h2>University Projects</h2>
-				<p class="endSection">
-					The projects displayed here are ones that I particularly enjoyed doing and found interesting. I
-					have completed many other projects at university in different areas such as cybersecurity, algorithms
-					and data structures, artificial intelligence, machine learning, and web applications. A lot of these
-					are either web APIs, console, or command line applications so aren't very interesting to show. 
-				</p>
-				<h3>Asteroids</h3>
-					<p>
-						A simple game of asteroids was created in typescript using functional programming 
-						practices. The following are some features of the game: 
-					</p>
-					<ul>
-						<li>Observables control the main game loop and manage the user input</li>
-						<li>Asteroids destroyed add to the user score, which increase the level. A higher level increases asteroid density.</li>
-						<li>The user has 3 lives only before game over. Colliding with an asteroid causes the asteroid to explode and a life to be lost.</li>
-						<li>Collisions were implemented by using linear algebra and checking for intersection points 
-							between the ship and the asteroids. This provides precise collision checking between rotating objects.
+		<div>
+			<div class="mobile-title">
+				<p> <strong>Dylan Cain-Pruis</strong>: Documentation</p>
+			</div>
+		
+			<nav class="navbar">
+				<div class="nav-title">
+					<p><strong>Dylan Cain-Pruis</strong></p>
+					<p>Documentation</p>
+				</div>
+				<div class="nav-item-container">
+					<ul class="nav-item-list">
+						<li class="nav-item code-font">
+							<a href="#about-me">
+								user.about_me 
+							</a>
+						</li>
+						<li class="nav-item code-font">
+							<a href="#asteroids">
+								project.asteroids
+							</a>
+						</li>
+						<li class="nav-item code-font">
+							<a href="#patient_monitor">
+								project.patient_monitor 
+							</a>
+						</li>
+						<li class="nav-item code-font">
+							<a href="#goodreads-plus">
+								project.goodreads_plus 
+							</a>
+						</li>
+						<li class="nav-item code-font">
+							<a href="#book-finder">
+								project.book_finder
+							</a>
+						 </li>
+						<li class="nav-item code-font">
+							<a href="#file-cleanse">
+								project.file_cleanse
+							</a>
 						</li>
 					</ul>
-					<p> Note that I'm not very good at the game as seen in the video below! </p>
-						
-					<video src="asteroids.mp4" class="fit endSection"  alt="Gameplay of the asteroids application" controls>Demo gameplay of asteroids</video>
+				</div>
+			</nav>
+			
+			<div class="content">
 				
-						
-				<h3>Patient Monitor</h3>
+				<div class="title-box">
+					<h1 id="about-me" class="title code-font">user.about_me <span> — About me </span></h1>
+				</div>
+				<div class="subcontent">
 					<p>
-						A JavaFX desktop application was developed over the course of an entire unit that allowed a 
+						Welcome to the website documentation for me, Dylan Cain-Pruis! 
+					</p>
+					<p>
+						I'm a current student at Monash University in my fith and final year.
+						I graduate at the end of 2021 with a degree for Software Engineering (Hons) / Computer Science. 
+						
+					</p>
+					<p>
+						The projects displayed here are ones that I particularly enjoyed doing, found interesting, or have a user
+						interface to show. During my time at university I've learnt a range of topics such as algorithms and datastructures, 
+						software and cyber security, artifical intelligence, machine learning, and more. 
+					</p>
+						
+					<div class="note end-section">
+						<p><strong>Please note:</strong></p>
+						<br>
+						<p>
+							This website will be updated in the future with changes to the projects that are displayed.
+						</p>
+					</div>
+					
+				</div>
+				<div class="title-box">
+					<h1 id="asteroids" class="title code-font">project.asteroids<span> — Asteroids</span></h1>
+				</div>
+				<div class="subcontent">
+					<div class="note">
+						<ul>
+							<li>Written in Typescript using a functional programming style</li>
+							<li>Utilised Observables for the game loop and handling user input</li>
+						</ul>
+					</div>
+					<p>
+						For a functional programming unit at University, we had to program a version of the game
+						Asteroids. In my version, a user has three lives and a life is lost everytime it collides
+						with an asteroid. My favourite part of this project was implementing the collision algorithm. 
+					</p>
+					<p>
+						First, the algorithm checks if the asteroid and user's ship are close by. Then it calculates vectors for
+						each side of both polygons. Lastly, it checks for any intersections between the ship's vectors and
+						the asteroid's vectors. This allowed more precise collision than a square hit box since the objects
+						are rotating in space. Other notable features of the game are:
+					</p>
+					<ul>
+						<li>Destroying a large (red) asteroid splits it into two smaller (orange) asteroids.</li>
+						<li>Asteroids destroyed add to the user score, which increase the level. A higher level increases asteroid density.</li>
+						<li>The user has 3 lives only before game over. Colliding with an asteroid causes the asteroid to explode and a life to be lost.</li>
+					</ul>
+					
+					<p>I'm not very good at the game as seen in the video below! </p>
+						
+					<video src="asteroids.mp4" class="fit end-section"  alt="Gameplay of the asteroids application" controls>Demo gameplay of asteroids</video>
+				</div>
+				<div class="title-box">
+					<h1 id="patient_monitor" class="title code-font">project.patient_monitor<span> — Patient Monitor</span></h1>
+				</div>
+				<div class="subcontent">
+
+					<div class="note">
+						<ul>
+							<li>User interface created with JavaFX</li>
+							<li>Followed design principles and patterns to create and later extend a class diagram in UML</li>
+						</ul>
+					</div>
+					<p>
+						A desktop application was developed over the course of an entire unit that allowed a 
 						health practitioner to sign in with an id and view a list of their patients that can be monitored. 
 						The following are a list of features that were implemented:
 					</p>
@@ -48,16 +138,23 @@
 					<p>
 						A large part of the software and assignments was to create software using design principles and patterns
 						such that we could later extend the software. The software made use of observers, abstract
-						factories, iterators, and more. In the later assignment when extending the initial software was easy
-						and required only a few refactors due to how it was innitially designed.
-						<br>
+						factories, iterators, and more. 
+					</p>
+					<p>
+						In the later assignment, extending the initial software was easy
+						and required only a few refactors due to how it was initially designed.
+					</p>
+					<p>
 						Below is an image of the patient monitor with a few patients displayed. Note all the data shown
 						is fake data that was given to us by the university for completing the assignments.
 					</p>
-					<img src="patient_monitor.jpg" class="fit endSection" alt="Patient monitor displaying cholesterol and blood pressure information">
-
-			<h2>Other Projects</h2>
-				<h3>Goodreads advanced search</h3>
+					<img src="patient_monitor.jpg" class="fit end-section" alt="Patient monitor displaying cholesterol and blood pressure information">
+				</div>
+				<div class="title-box">
+					<h1 id="goodreads-plus" class="title code-font">project.goodreads_plus<span> — Goodreads+</span></h1>
+				</div>
+				<div class="subcontent">
+					
 					<p> 
 						Goodreads provides a platform for reviewing, rating, and searching for books. When
 						working on this project there was no feature to filter/sort a shelf for a specific
@@ -65,12 +162,14 @@
 						components:
 					</p>	
 				
-					<ol>
-						<li>A web scraper written in python</li>
-						<li>A web application using django to display the scraped data and sort/filter it	</li>
-					</ol>
-
-					<h4>Web Scraper</h4>
+					<div class="note">
+						<ol>
+							<li>A web scraper written in python</li>
+							<li>A web application using django to display the scraped data and sort/filter it	</li>
+						</ol>
+					</div>
+		
+					<h2 class="content-subtitle">Web Scraper</h2>
 						<p> 
 							Currently, only books from the fantasy shelf, 
 							https://www.goodreads.com/shelf/show/fantasy, are being scraped as that's the
@@ -85,7 +184,7 @@
 							occasionally as the values do change. Updating the information is as simple as
 							starting the web application and going to the /scraper/ endpoint.
 						</p>
-					<h4>Web application</h4>
+					<h2 class="content-subtitle">Web application</h2>
 						<p> 
 							A simple web application is used to display the data retrieved from the scraper.
 							The web application makes use of Django's templates to generate the HTML page
@@ -106,11 +205,62 @@
 							 read before so they are removed from the list and to also expanding the number of books in the database (currently 
 							 1250).
 						</p>
-						<img src="goodreads_scraper.jpg" class="fit" alt="Goodreads search application main page">
-		
+						<img src="goodreads_scraper.jpg" class="fit end-section" alt="Goodreads search application main page">
+				</div>
+			
+				<div class="title-box">
+					<h1 id="book-finder" class="title code-font">project.book_finder<span> — Book Finder</span></h1>
+				</div>
+				
+				<div class="subcontent">
+					<div class="note">
+						<ul>
+							<li>An iOS application that is a work in progress</li>
+							<li>Extends Goodreads+ and adds more features</li>
+						</ul>
+					</div>
+					<p>
+						This is currently being developed as part of an iOS development unit. The aim of the app is
+						the same as Goodreads+, but includes additional features for a user on top of the search functionality 
+						and is for iOS instead of a website. The additional features of this application are:
+					</p>
+					<ul>
+						<li>Every user can add/remove books to default lists - what they have read or want to read</li>
+						<li>Following the future work of Goodreads+, lists can be used to further filter lists by removing all books present in a selected list</li>
+						<li>Users can rate, and review books or even recommend another book</li>
+						<li>Users can create custom lists, which can be later shared and rated by other users</li>
+						<li>Books will show ratings from outside sources (i.e. Goodreads or Google books) to get as much input from other people as possible</li>
+						<li>The database of books will be initially populated with a selection of books retrieved using the web scraper from the Goodreads+ project</li>
+					</ul>
+					<p>
+						This section will be further updated with screenshots once the application is developed!
+					</p>
+				</div>
 						
+				<div class="title-box">
+					<h1 id="file-cleanse" class="title code-font">project.file_cleanse<span> — File Cleanse</span></h1>
+				</div>
+				
+				<div class="subcontent">
+					<div class="note">
+						<ul>
+							<li>A web application using Golang</li>
+							<li>'Cleanse' common file formats of malicious entities</li>
+						</ul>
+					</div>
+					<p>
+						My final year honours project involves building an application, with a team of 5, that will look
+						for specific security vulnerabilities that are being exploited in some common file
+						types and remove them. Users would be able to upload a document to the website and
+						then download the resulting 'cleansed' file. 
+					</p>
+					<p>
+						The project is currently in its initial phases and will span the entire year. This section
+						will be updated when the project is completed.
+					</p>
+				</div>
+			</div>
+			
 		</div>
-		
-
 	</body>
 </html>
